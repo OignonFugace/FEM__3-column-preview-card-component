@@ -38,7 +38,7 @@
 body {
     display: grid;
     justify-content: center;
-    margin: 4rem 0;
+    margin: 3rem 0;
     font-family: 'Lexend Deca', sans-serif;
     font-size: 15px;
     background-color: var(--background-color);
@@ -95,33 +95,34 @@ h1 {
     border-radius: 2rem;
     border: 2px solid var(--very-ligh-gray-color);
     cursor: pointer;
+    transition: 0.2s;
 }
 
 .card-item__btn {
     margin-top: 2rem;
-}
-
-.card-item:nth-child(1) .btn {
-    color: var(--primary-bright-orange);
-}
-.card-item:nth-child(2) .btn {
-    color: var(--primary-dark-cyan);
-}
-.card-item:nth-child(3) .btn {
-    color: var(--primary-very-dark-cyan);
+    color: black;
+    mix-blend-mode: screen;
+    transition: 0.2s;
 }
 
 .btn:hover {
     background-color: transparent;
 }
 
-.card-item:nth-child(n) .btn:hover {
+.card-item__btn:hover {
     color: var(--very-ligh-gray-color);
 }
 
 /* Media queries */
 
 @media only screen and (min-width: 950px) {
+    body {
+        min-height: 100vh;
+        margin: 0;
+        justify-content: center;
+        align-content: center;
+    }
+
     .card {
         flex-direction: row;
     }
